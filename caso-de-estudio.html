@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Caso de Estudio — Infraestructura Viva</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <span class="logo">Virginia Diaz</span>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+  </div>
+</nav>
+
+<header class="case-header-wrapper">
+  <div class="container case-header">
+
+    <h1 class="case-title">Infraestructura Viva</h1>
+    <p class="case-subtitle">
+      Migración de infraestructura on-premise a arquitectura cloud en AWS
+    </p>
+
+    <div class="tech-stack">
+      <span class="tech-pill">AWS</span>
+      <span class="tech-pill">EC2</span>
+      <span class="tech-pill">S3</span>
+      <span class="tech-pill">DynamoDB</span>
+      <span class="tech-pill">VPC</span>
+      <span class="tech-pill">CloudWatch</span>
+      <span class="tech-pill">SNS</span>
+      <span class="tech-pill">SQS</span>
+    </div>
+
+  </div>
+</header>
+
+<section class="container case-section">
+
+<h2>Descripción de la actividad</h2>
+
+<p>El proyecto <strong>Infraestructura Viva</strong> consistió en diseñar e implementar una solución completa de migración cloud para la empresa ficticia Soluciones Digitales ACME.</p>
+
+<p>La solución debía cubrir todas las capas de una arquitectura cloud moderna: almacenamiento, bases de datos relacionales y NoSQL, cómputo, red virtual, mensajería y monitoreo.</p>
+
+<hr>
+
+<h2>Desafío principal</h2>
+
+<p>El mayor desafío no fue técnico en sí mismo, sino <strong>conceptual</strong>: comprender por qué cada decisión arquitectónica importa.</p>
+
+<ul>
+
+<li>
+<strong>Restricciones de permisos en AWS Academy:</strong>
+el rol <code>voclabs</code> no permitía crear instancias RDS ni CloudFront.
+</li>
+
+<li>
+<strong>Diagnóstico de errores:</strong>
+el servidor EC2 no cargaba porque el navegador forzaba HTTPS al puerto 443.
+</li>
+
+<li>
+<strong>Gestión de servicios interdependientes:</strong>
+coordinación entre S3, DynamoDB, EC2, SNS, SQS y CloudWatch.
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Solución propuesta</h2>
+
+<div class="architecture">
+
+<div class="arch-card">
+<h3>Almacenamiento</h3>
+<p>S3 para archivos activos y Glacier para archivado automático.</p>
+</div>
+
+<div class="arch-card">
+<h3>Bases de datos</h3>
+<p>RDS MySQL para datos transaccionales y DynamoDB para tickets de soporte.</p>
+</div>
+
+<div class="arch-card">
+<h3>Cómputo</h3>
+<p>Instancia EC2 con Apache preparada para escalado horizontal.</p>
+</div>
+
+<div class="arch-card">
+<h3>Red</h3>
+<p>VPC con subredes públicas y privadas en dos zonas de disponibilidad.</p>
+</div>
+
+<div class="arch-card">
+<h3>Mensajería y monitoreo</h3>
+<p>SNS, SQS y CloudWatch para alertas, colas de mensajes y monitoreo.</p>
+</div>
+
+</div>
+
+<hr>
+
+<h2>Herramientas técnicas utilizadas</h2>
+
+<table>
+
+<tr>
+<th>Herramienta</th>
+<th>Uso en el proyecto</th>
+</tr>
+
+<tr>
+<td><strong>Amazon S3</strong></td>
+<td>Almacenamiento de archivos estáticos</td>
+</tr>
+
+<tr>
+<td><strong>Amazon DynamoDB</strong></td>
+<td>Base de datos NoSQL</td>
+</tr>
+
+<tr>
+<td><strong>Amazon EC2</strong></td>
+<td>Servidor web Apache</td>
+</tr>
+
+<tr>
+<td><strong>Amazon VPC</strong></td>
+<td>Red virtual privada</td>
+</tr>
+
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td>Monitoreo de métricas y alarmas</td>
+</tr>
+
+<tr>
+<td><strong>Git + GitHub</strong></td>
+<td>Control de versiones del proyecto</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Principales aprendizajes</h2>
+
+<p><strong>Arquitectura cloud:</strong> seguridad, escalabilidad y disponibilidad dependen de decisiones de diseño.</p>
+
+<p><strong>Resolución de problemas:</strong> diagnosticar capa por capa fue clave para identificar errores.</p>
+
+<p><strong>Documentación técnica:</strong> el proyecto se documentó completamente en Markdown con evidencia técnica.</p>
+
+<hr>
+
+<h2>Métricas de impacto logradas</h2>
+
+<table>
+
+<tr>
+<th>Métrica</th>
+<th>Resultado</th>
+</tr>
+
+<tr>
+<td>Servicios AWS implementados</td>
+<td>10 servicios integrados</td>
+</tr>
+
+<tr>
+<td>Reducción de costos almacenamiento</td>
+<td>~90% usando Glacier</td>
+</tr>
+
+<tr>
+<td>Alarmas automáticas</td>
+<td>2 alarmas vía SNS + email</td>
+</tr>
+
+<tr>
+<td>Métricas monitoreadas</td>
+<td>3 métricas en CloudWatch</td>
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+
+Caso de estudio elaborado como parte del Proyecto Infraestructura Viva — Módulo Cloud — Alkemy / SOFOFA
+
+</footer>
+
+</body>
+</html>
