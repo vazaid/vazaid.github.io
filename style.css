@@ -252,6 +252,12 @@ hr{
   margin-top:0.5rem;
 }
 
+.project-link2 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .project-link:hover{
   text-decoration:underline;
 }
