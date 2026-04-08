@@ -253,6 +253,10 @@ hr{
 }
 
 .project-link2 {
+  font-size:13px;
+  color:var(--blue-mid);
+  text-decoration:none;
+  margin-top:0.5rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
